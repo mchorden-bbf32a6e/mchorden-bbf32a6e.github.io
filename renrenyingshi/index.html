@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人人影视官网-美剧下载_高清电影_字幕资源</title>
+  <meta name="description" content="人人影视官网提供美剧、高清电影、字幕资源与下载指引，涵盖热门剧集推荐、更新动态、分类筛选和观看指南，适合追剧用户与影视资源爱好者。">
+  <meta name="keywords" content="美剧下载,高清电影,字幕资源,影视资源站,追剧推荐">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f4f6fa;
+      --panel: #ffffff;
+      --ink: #1a1e24;
+      --muted: #5a606b;
+      --line: #e2e6ec;
+      --brand: #0f2838;
+      --brand-light: #1f4b66;
+      --accent: #c44536;
+      --accent-soft: #fbeae6;
+      --gold: #d4a24c;
+      --radius: 12px;
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+      --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      --header-h: 108px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-h) + 12px);
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 15px;
+      padding-top: var(--header-h);
+    }
+
+    a {
+      color: var(--brand-light);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* 吸顶公告 + 页头 */
+    .sticky-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: var(--panel);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .announce-bar {
+      background: var(--brand);
+      color: #e0edf5;
+      font-size: 13px;
+      padding: 8px 0;
+      text-align: center;
+      letter-spacing: 0.3px;
+      border-bottom: 1px solid #1f4b66;
+    }
+
+    .announce-bar span {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      padding: 1px 10px;
+      border-radius: 20px;
+      margin-right: 8px;
+      font-weight: 600;
+    }
+
+    .header-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand svg {
+      width: 38px;
+      height: 38px;
+    }
+
+    .brand-text {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: 0.5px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .header-nav a {
+      color: var(--ink);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .header-nav a:hover {
+      color: var(--accent);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .header-actions .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      cursor: default;
+      color: var(--muted);
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #f0f4f9 0%, #ffffff 100%);
+      border-radius: var(--radius);
+      margin: 28px 0 32px;
+      padding: 32px 36px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-content {
+      flex: 1 1 380px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--brand);
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 20px;
+      max-width: 560px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      border: none;
+      cursor: default;
+      font-size: 0.95rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--brand);
+      color: var(--brand);
+      padding: 9px 26px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: default;
+      font-size: 0.95rem;
+    }
+
+    .hero-visual {
+      flex: 0 0 280px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* 三栏布局 */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 170px 1fr 250px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .sidebar-left {
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 20px 14px;
+      border: 1px solid var(--line);
+      position: sticky;
+      top: calc(var(--header-h) + 20px);
+    }
+
+    .sidebar-left h3 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .channel-list a {
+      display: block;
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--ink);
+      transition: background 0.2s;
+      border-left: 3px solid transparent;
+    }
+
+    .channel-list a:hover {
+      background: #eef2f7;
+      border-left-color: var(--accent);
+    }
+
+    .sidebar-left .tag-cloud {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .sidebar-left .tag-cloud span {
+      background: #eef2f7;
+      padding: 3px 10px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      cursor: default;
+    }
+
+    /* 中栏 */
+    .main-col {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .section-card {
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 22px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .intro-text p {
+      margin-bottom: 12px;
+      color: #2d3239;
+    }
+
+    /* 热门内容卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .content-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+      background: #fafcff;
+      transition: box-shadow 0.2s;
+    }
+
+    .content-card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--brand);
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0;
+    }
+
+    .card-meta span {
+      background: #e9eef5;
+      padding: 2px 8px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .card-desc {
+      font-size: 0.86rem;
+      color: #3f4650;
+      line-height: 1.5;
+      margin: 8px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-stats {
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px dashed var(--line);
+      padding-top: 8px;
+      margin-top: 6px;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-time {
+      font-size: 0.75rem;
+      color: var(--muted);
+      min-width: 60px;
+    }
+
+    .update-content {
+      font-size: 0.92rem;
+    }
+
+    .update-content strong {
+      color: var(--brand);
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      background: #f4f8fe;
+      border-radius: 8px;
+      padding: 14px 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--line);
+      cursor: default;
+      color: var(--brand);
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 1.1rem;
+      margin: 22px 0 8px;
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .deep-dive p {
+      margin-bottom: 12px;
+      color: #2d3239;
+    }
+
+    .deep-dive ul {
+      margin: 8px 0 16px 20px;
+      color: #2d3239;
+    }
+
+    .deep-dive li {
+      margin-bottom: 4px;
+    }
+
+    /* FAQ */
+    details {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      background: #fafcff;
+    }
+
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--brand);
+    }
+
+    details[open] {
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    details p {
+      margin-top: 10px;
+      color: #3f4650;
+      font-size: 0.92rem;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .comment-item {
+      background: #f7f9fd;
+      border-radius: 10px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .comment-user {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--brand);
+      margin-bottom: 4px;
+    }
+
+    .comment-text {
+      font-size: 0.88rem;
+      color: #3f4650;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--muted);
+      min-width: 80px;
+    }
+
+    .news-title {
+      font-weight: 600;
+      color: var(--brand);
+      margin-bottom: 2px;
+    }
+
+    .news-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* 相关推荐标签 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rec-tags span {
+      background: #eef2f7;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: var(--brand);
+      border: 1px solid var(--line);
+      cursor: default;
+    }
+
+    /* 右栏 */
+    .sidebar-right {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .right-card {
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .right-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--brand);
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 6px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+
+    .toc-list a {
+      color: var(--ink);
+      display: block;
+      padding: 3px 0;
+    }
+
+    .toc-list a:hover {
+      color: var(--accent);
+    }
+
+    .hot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hot-list li {
+      font-size: 0.88rem;
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .hot-list .num {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.8rem;
+      min-width: 20px;
+    }
+
+    /* 页尾 */
+    footer {
+      background: var(--brand);
+      color: #b8c9d9;
+      margin-top: 48px;
+      padding: 40px 0 24px;
+    }
+
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      max-width: 260px;
+      margin-top: 8px;
+      color: #91a9bb;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links h5 {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: #b8c9d9;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 24px auto 0;
+      padding: 18px 24px 0;
+      border-top: 1px solid #1f3e52;
+      font-size: 0.75rem;
+      color: #7a919f;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar-left {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .sidebar-left h3 {
+        width: 100%;
+      }
+
+      .channel-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .channel-list a {
+        border-left: none;
+        background: #f2f5f9;
+        padding: 5px 14px;
+        border-radius: 30px;
+      }
+
+      .sidebar-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-visual {
+        flex: 0 0 auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header-main {
+        flex-wrap: wrap;
+      }
+
+      .header-nav {
+        gap: 14px;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-content h1 {
+        font-size: 1.7rem;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar-right {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        gap: 28px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    /* 覆盖滚动偏移 */
+    #intro, #hot, #latest, #category, #deep, #guide, #faq, #comments, #news, #recommend, #selected {
+      scroll-margin-top: calc(var(--header-h) + 20px);
+    }
+  </style>
+</head>
+<body>
+  <!-- 吸顶公告 + 页头 -->
+  <div class="sticky-wrap">
+    <div class="announce-bar">
+      <span>新</span> 本周上线《流人 第四季》《企鹅人》全季资源，字幕组同步更新
+    </div>
+    <header class="header-main">
+      <div class="brand">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="#0f2838"/>
+          <path d="M12 10 L20 18 L28 10" stroke="#d4a24c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 30 L20 22 L28 30" stroke="#c44536" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="20" r="3" fill="#fff" opacity="0.9"/>
+        </svg>
+        <span class="brand-text">人人影视官网</span>
+      </div>
+      <nav class="header-nav" aria-label="主题导航">
+        <a href="/#hot">热门剧集</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#category">分类筛选</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="header-actions">
+        <span class="btn-ghost">搜索剧集</span>
+      </div>
+    </header>
+  </div>
+
+  <div class="container">
+    <!-- 首屏 -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>人人影视官网</h1>
+        <p class="hero-desc">聚合美剧、英剧、高清电影与字幕资源。每日追踪热门剧集更新，提供类型筛选、下载指引与观看推荐，适合追剧用户与影视爱好者快速定位想看的内容。</p>
+        <div class="hero-cta">
+          <span class="btn-primary">浏览热门剧集</span>
+          <span class="btn-outline">查看更新日历</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg width="240" height="160" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="12" width="224" height="136" rx="16" fill="#eef3f9" stroke="#d0dae6" stroke-width="1.5"/>
+          <rect x="24" y="28" width="80" height="10" rx="5" fill="#c44536" opacity="0.8"/>
+          <rect x="24" y="48" width="140" height="8" rx="4" fill="#b8c9d9"/>
+          <rect x="24" y="64" width="120" height="8" rx="4" fill="#b8c9d9"/>
+          <rect x="24" y="88" width="60" height="40" rx="8" fill="#0f2838" opacity="0.12"/>
+          <rect x="96" y="88" width="60" height="40" rx="8" fill="#0f2838" opacity="0.12"/>
+          <rect x="168" y="88" width="44" height="40" rx="8" fill="#0f2838" opacity="0.12"/>
+          <circle cx="200" cy="32" r="14" fill="#d4a24c" opacity="0.3"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 三栏主内容 -->
+    <div class="layout-grid">
+      <!-- 左栏 -->
+      <aside class="sidebar-left">
+        <h3>频道导航</h3>
+        <ul class="channel-list">
+          <li><a href="/#hot">美剧热榜</a></li>
+          <li><a href="/#latest">更新动态</a></li>
+          <li><a href="/#category">类型筛选</a></li>
+          <li><a href="/#deep">资源解析</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">影视资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+          <li><a href="/#selected">精选专题</a></li>
+        </ul>
+        <div class="tag-cloud">
+          <span>悬疑美剧</span>
+          <span>高分英剧</span>
+          <span>科幻剧集</span>
+          <span>犯罪题材</span>
+          <span>完结资源</span>
+        </div>
+      </aside>
+
+      <!-- 中栏 -->
+      <main class="main-col">
+        <!-- 1. 内容简介 -->
+        <section class="section-card" id="intro">
+          <h2 class="section-title">关于人人影视官网</h2>
+          <div class="intro-text">
+            <p>人人影视官网是一个面向影视爱好者的资源聚合与推荐平台，集中展示美剧、英剧、高清电影、动漫及纪录片等类型的下载与在线观看信息。如果你正在寻找“美剧下载”或“高清电影资源”，这里提供了按类型、年份、评分筛选的浏览入口，同时汇总字幕组更新节奏与热门剧集动态。不少用户习惯在通勤途中或睡前查看当日新更，页面中的“更新动态”与“热门剧集”板块能快速满足这类场景需求。对于纠结“看哪部”或“哪部已完结”的观众，分类筛选与深度解析中整理了剧集状态与题材特点，方便比较选择。</p>
+            <p>平台内容以条目卡片和列表形式呈现，每个条目包含类型标签、简短看点、热度与更新状态等示例信息。你不需要登录即可浏览全部展示内容，所有入口均为站内锚点定位，方便快速跳转。无论你是长期追剧的资深观众，还是偶尔找片看的轻度用户，都能通过频道导航与标签索引缩小范围，找到适合自己口味的影视资源。</p>
+          </div>
+        </section>
+
+        <!-- 2. 热门内容推荐 -->
+        <section class="section-card" id="hot">
+          <h2 class="section-title">热门剧集与电影推荐</h2>
+          <div class="card-grid">
+            <div class="content-card">
+              <div class="card-title">流人 第四季</div>
+              <div class="card-meta"><span>谍战</span><span>英剧</span><span>更新至E04</span></div>
+              <div class="card-desc">军情五处边缘部门再起波澜，老牌特工与新人搭档追查跨国暗线。</div>
+              <div class="card-stats"><span>热度 9.2</span><span>评分 9.1</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-title">企鹅人</div>
+              <div class="card-meta"><span>犯罪</span><span>美剧</span><span>全8集</span></div>
+              <div class="card-desc">哥谭地下权力真空，企鹅人科波特一步步攀上犯罪王座。</div>
+              <div class="card-stats"><span>热度 8.9</span><span>评分 8.8</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-title">沙丘：预言</div>
+              <div class="card-meta"><span>科幻</span><span>美剧</span><span>更新至E06</span></div>
+              <div class="card-desc">厄拉科斯前传，姐妹会崛起与帝国权力博弈的史诗前奏。</div>
+              <div class="card-stats"><span>热度 8.7</span><span>评分 8.5</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-title">谜探休格</div>
+              <div class="card-meta"><span>悬疑</span><span>美剧</span><span>全8集</span></div>
+              <div class="card-desc">私家侦探调查失踪案，线索指向好莱坞光鲜背后的暗面。</div>
+              <div class="card-stats"><span>热度 8.4</span><span>评分 8.6</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-title">东京罪恶 第二季</div>
+              <div class="card-meta"><span>犯罪</span><span>美剧</span><span>全10集</span></div>
+              <div class="card-desc">记者深入东京黑帮腹地，在暴力与腐败中寻找真相。</div>
+              <div class="card-stats"><span>热度 8.1</span><span>评分 8.2</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-title">王冠 第六季</div>
+              <div class="card-meta"><span>历史</span><span>英剧</span><span>全10集</span></div>
+              <div class="card-desc">王室最后的篇章，戴安娜事件后女王面临舆论与家庭的双重考验。</div>
+              <div class="card-stats"><span>热度 8.5</span><span>评分 8.7</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section class="section-card" id="latest">
+          <h2 class="section-title">最新更新动态</h2>
+          <div class="update-list">
+            <div class="update-item"><span class="update-time">今日</span><div class="update-content"><strong>《流人 第四季》</strong> E04 熟肉已出，字幕组精校版同步上线。</div></div>
+            <div class="update-item"><span class="update-time">今日</span><div class="update-content"><strong>《企鹅人》</strong> 全8集 1080p 内封字幕打包发布。</div></div>
+            <div class="update-item"><span class="update-time">昨日</span><div class="update-content"><strong>《沙丘：预言》</strong> E06 更新，HDR 版本可供选择。</div></div>
+            <div class="update-item"><span class="update-time">昨日</span><div class="update-content"><strong>《谜探休格》</strong> 全8集 完结，双语字幕整理完毕。</div></div>
+            <div class="update-item"><span class="update-time">2天前</span><div class="update-content"><strong>《东京罪恶 第二季》</strong> 全10集 蓝光版资源更新。</div></div>
+            <div class="update-item"><span class="update-time">2天前</span><div class="update-content"><strong>《王冠 第六季》</strong> 全10集 4K 版本补档。</div></div>
+            <div class="update-item"><span class="update-time">3天前</span><div class="update-content"><strong>《最后生还者 第二季》</strong> 首支预告片字幕版收录。</div></div>
+            <div class="update-item"><span class="update-time">3天前</span><div class="update-content"><strong>《夜访吸血鬼 第二季》</strong> 全8集 字幕修正版更新。</div></div>
+          </div>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section-card" id="category">
+          <h2 class="section-title">按类型筛选</h2>
+          <div class="category-grid">
+            <div class="category-item">悬疑美剧</div>
+            <div class="category-item">高分英剧</div>
+            <div class="category-item">科幻剧集</div>
+            <div class="category-item">犯罪题材</div>
+            <div class="category-item">历史传记</div>
+            <div class="category-item">恐怖惊悚</div>
+            <div class="category-item">动漫番剧</div>
+            <div class="category-item">纪录片</div>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析正文 -->
+        <section class="section-card deep-dive" id="deep">
+          <h2 class="section-title">美剧与电影资源深度解析</h2>
+          <p>在人人影视官网的资源库中，美剧与电影占据主要篇幅。不同剧集在更新节奏、字幕质量和资源规格上差异明显，了解这些区别能帮助你更高效地找到适合观看的版本。以下从类型选择、更新规律和版本差异三个角度展开说明。</p>
+
+          <h3>类型选择：悬疑、科幻与犯罪题材的特点</h3>
+          <p>悬疑类美剧通常以单集案件或长线谜题推进，适合喜欢推理和反转的观众。科幻剧集则依赖世界观构建，更新周期往往更长，但单集信息密度高。犯罪题材英剧普遍篇幅较短，一季6-8集，适合周末集中刷完。如果你在通勤路上观看，优先选择单集40分钟左右的程序剧；睡前观看则更适合节奏舒缓的历史传记类。</p>
+
+          <h3>更新规律：如何判断一部剧是否值得追更</h3>
+          <p>大部分美剧按周更播出，秋季档集中在9月至11月，春季档在1月至3月。字幕组通常在正片播出后12-24小时内发布熟肉版本。对于已经完结的剧集，平台会标注“全X集”标签，方便一次性获取。部分热门剧集如《流人》采用每周更新一集的方式，而《企鹅人》这类限定剧则集中在数周内播完。关注更新动态板块可以避免错过最新集。</p>
+
+          <h3>版本差异：高清、HDR与字幕封装</h3>
+          <p>同一部剧集可能提供多种规格：720p 适合移动端节省空间，1080p 是多数用户的首选，4K HDR 则需要兼容的显示设备。字幕方面分为内封字幕和外挂字幕，内封字幕播放时无需额外加载，外挂字幕则便于调整样式。部分资源提供双语字幕，适合学习英语或对照观看。人人影视官网的条目卡片会标注清晰度与字幕类型，方便你在下载前确认。</p>
+
+          <ul>
+            <li>优先选择近30天内更新的资源，种子健康度更高。</li>
+            <li>限定剧通常一次放出全季，适合一次性看完。</li>
+            <li>查看评论区的字幕反馈，可以避开翻译质量不稳定的版本。</li>
+          </ul>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="section-card" id="guide">
+          <h2 class="section-title">观看与筛选指南</h2>
+          <p>页面按功能划分为多个区域：顶部公告条提示本周重点更新，左侧频道导航提供快速跳转，中栏内容按热门、最新、分类、深度解析依次展开。在移动端，频道导航会折叠为横向标签，方便触屏操作。每个内容卡片上的标签代表类型和状态，点击分类入口可按类型过滤。如果你希望追踪某一部剧的更新，可以记录其在“最新更新”中的出现频率，或直接查看深度解析中的更新规律说明。相关推荐板块提供了题材相近的条目，适合在看完一部剧后寻找下一部。</p>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section-card" id="faq">
+          <h2 class="section-title">常见问题</h2>
+          <details>
+            <summary>人人影视官网的美剧一般多久更新一次？</summary>
+            <p>大部分周更美剧在正片播出后12-24小时内更新熟肉资源。秋季档和春季档更新频率最高，夏季档相对稀疏。完结剧集会一次性标注全季资源。</p>
+          </details>
+          <details>
+            <summary>悬疑类美剧适合什么人看？</summary>
+            <p>适合喜欢推理、反转和强情节驱动的观众。单集独立案件或长线谜题推进的剧集，对专注度要求较高，适合有整块时间观看的用户。</p>
+          </details>
+          <details>
+            <summary>在哪能找到已完结的高分英剧资源？</summary>
+            <p>在分类入口选择“高分英剧”，或查看热门推荐中标注“全X集”的条目。深度解析中也整理了英剧的篇幅特点，方便快速定位。</p>
+          </details>
+          <details>
+            <summary>高清电影和剧集的字幕是内封还是外挂？</summary>
+            <p>两种形式都有提供。条目卡片会标注字幕类型，内封字幕播放更便捷，外挂字幕适合需要调整字体或双语对照的用户。</p>
+          </details>
+          <details>
+            <summary>通勤路上看什么剧比较合适？</summary>
+            <p>单集40分钟左右的程序剧或犯罪题材比较适合碎片时间，例如《谜探休格》这类单集相对独立的剧集。科幻史诗类信息密度高，更适合安静环境观看。</p>
+          </details>
+          <details>
+            <summary>人人影视官网的资源和评分是真实平台数据吗？</summary>
+            <p>页面中的热度、评分和评论为示例数据，用于展示内容组织方式，不代表真实平台实时数据。资源名称和类型标签基于公开影视信息整理。</p>
+          </details>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section-card" id="comments">
+          <h2 class="section-title">用户评论</h2>
+          <div class="comment-grid">
+            <div class="comment-item"><div class="comment-user">追剧老猫</div><div class="comment-text">流人第四季还是那个味道，每周就等这一天。</div></div>
+            <div class="comment-item"><div class="comment-user">午夜场</div><div class="comment-text">企鹅人全季一口气看完，哥谭氛围拉满。</div></div>
+            <div class="comment-item"><div class="comment-user">橘子汽水</div><div class="comment-text">分类筛选挺方便，直接找科幻标签就行。</div></div>
+            <div class="comment-item"><div class="comment-user">英伦腔</div><div class="comment-text">王冠第六季画质不错，字幕翻译也到位。</div></div>
+            <div class="comment-item"><div class="comment-user">小破站常驻</div><div class="comment-text">希望多更新一些冷门悬疑剧，热门的基本都有了。</div></div>
+            <div class="comment-item"><div class="comment-user">夜航船</div><div class="comment-text">更新动态很及时，比我自己去别的站翻快多了。</div></div>
+            <div class="comment-item"><div class="comment-user">胶片时光</div><div class="comment-text">电影资源可以再多一些老片修复版。</div></div>
+            <div class="comment-item"><div class="comment-user">字幕组粉丝</div><div class="comment-text">双语字幕对学英语很友好，希望保持。</div></div>
+            <div class="comment-item"><div class="comment-user">沙发土豆</div><div class="comment-text">分类里的纪录片偏少，期待补充。</div></div>
+            <div class="comment-item"><div class="comment-user">凛冬将至</div><div class="comment-text">沙丘预言的美术风格太强了，推荐戴耳机看。</div></div>
+            <div class="comment-item"><div class="comment-user">一只影迷</div><div class="comment-text">深度解析里的版本差异说明很实用。</div></div>
+            <div class="comment-item"><div class="comment-user">周末不加班</div><div class="comment-text">通勤看谜探休格刚好，一集一个案子不拖沓。</div></div>
+            <div class="comment-item"><div class="comment-user">深海鱼</div><div class="comment-text">评论区的字幕反馈帮我避过一版机翻，感谢。</div></div>
+            <div class="comment-item"><div class="comment-user">追更人</div><div class="comment-text">建议加上剧集完结倒计时，更方便规划时间。</div></div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section-card" id="news">
+          <h2 class="section-title">影视资讯</h2>
+          <div class="news-list">
+            <div class="news-item"><span class="news-date">2025-03-18</span><div><div class="news-title">《流人》第五季正式续订</div><div class="news-desc">加里·奥德曼回归，预计秋季开拍，聚焦军情五处新一轮内斗。</div></div></div>
+            <div class="news-item"><span class="news-date">2025-03-15</span><div><div class="news-title">《沙丘：预言》第二季制作中</div><div class="news-desc">姐妹会起源故事将继续展开，主创透露新角色加入。</div></div></div>
+            <div class="news-item"><span class="news-date">2025-03-10</span><div><div class="news-title">《企鹅人》获评论家选择奖提名</div><div class="news-desc">科林·法瑞尔凭借该剧入围限定剧最佳男主角。</div></div></div>
+            <div class="news-item"><span class="news-date">2025-03-05</span><div><div class="news-title">多部英剧确认引进国内平台</div><div class="news-desc">《谜探休格》等剧集将上线流媒体，字幕版本同步制作。</div></div></div>
+            <div class="news-item"><span class="news-date">2025-02-28</span><div><div class="news-title">春季档美剧排期出炉</div><div class="news-desc">三月起多部犯罪题材回归，包括《东京罪恶》第三季。</div></div></div>
+            <div class="news-item"><span class="news-date">2025-02-20</span><div><div class="news-title">经典老片4K修复计划启动</div><div class="news-desc">多部上世纪悬疑片将推出修复版，收录双语字幕。</div></div></div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section-card" id="recommend">
+          <h2 class="section-title">相关推荐</h2>
+          <div class="rec-tags">
+            <span>高分悬疑美剧</span>
+            <span>完结犯罪英剧</span>
+            <span>科幻史诗剧集</span>
+            <span>历史传记电影</span>
+            <span>通勤短剧推荐</span>
+            <span>睡前慢节奏剧</span>
+            <span>HDR高清资源</span>
+            <span>双语字幕剧集</span>
+          </div>
+        </section>
+
+        <!-- 11. 精选专题 -->
+        <section class="section-card" id="selected">
+          <h2 class="section-title">本周精选专题</h2>
+          <p>聚焦“谍战与犯罪”题材，整理了《流人》《企鹅人》《东京罪恶》等剧集的观看顺序和背景信息。专题内包含题材对比、更新状态和字幕版本说明，适合想深入这一类型的观众。专题内容每周根据更新动态调整，保留热度较高的条目。</p>
+          <p style="margin-top:10px; color: var(--muted);">专题条目：流人 第四季 · 企鹅人 · 东京罪恶 第二季 · 谜探休格 · 夜访吸血鬼 第二季</p>
+        </section>
+      </main>
+
+      <!-- 右栏 -->
+      <aside class="sidebar-right">
+        <div class="right-card">
+          <h4>页内目录</h4>
+          <ul class="toc-list">
+            <li><a href="/#intro">内容简介</a></li>
+            <li><a href="/#hot">热门推荐</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#category">分类筛选</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">影视资讯</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+          </ul>
+        </div>
+        <div class="right-card">
+          <h4>热门条目</h4>
+          <ul class="hot-list">
+            <li><span class="num">1</span> 流人 第四季</li>
+            <li><span class="num">2</span> 企鹅人</li>
+            <li><span class="num">3</span> 沙丘：预言</li>
+            <li><span class="num">4</span> 谜探休格</li>
+            <li><span class="num">5</span> 王冠 第六季</li>
+            <li><span class="num">6</span> 东京罪恶 第二季</li>
+          </ul>
+        </div>
+        <div class="right-card">
+          <h4>延伸阅读</h4>
+          <ul class="toc-list">
+            <li><a href="/#deep">美剧更新规律解析</a></li>
+            <li><a href="/#deep">高清版本选择建议</a></li>
+            <li><a href="/#faq">完结剧集查找方法</a></li>
+            <li><a href="/#news">近期影视续订动态</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="#1f4b66"/>
+            <path d="M12 10 L20 18 L28 10" stroke="#d4a24c" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M12 30 L20 22 L28 30" stroke="#c44536" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span style="color:#fff;font-weight:700;font-size:1.1rem;">人人影视官网</span>
+        </div>
+        <p>影视资源推荐与更新追踪，提供美剧、英剧、电影的分类浏览与观看参考。</p>
+      </div>
+      <div class="footer-links">
+        <div><h5>剧集分类</h5><ul><li><a href="/#category">悬疑美剧</a></li><li><a href="/#category">高分英剧</a></li><li><a href="/#category">科幻剧集</a></li><li><a href="/#category">犯罪题材</a></li></ul></div>
+        <div><h5>快速入口</h5><ul><li><a href="/#hot">热门推荐</a></li><li><a href="/#latest">最新更新</a></li><li><a href="/#deep">深度解析</a></li><li><a href="/#faq">常见问题</a></li></ul></div>
+        <div><h5>互动</h5><ul><li><a href="/#comments">用户评论</a></li><li><a href="/#news">影视资讯</a></li><li><a href="/#recommend">相关推荐</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 人人影视官网 · 页面内容为示例展示</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </footer>
+</body>
+              </html>
